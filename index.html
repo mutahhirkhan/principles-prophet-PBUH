@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/icon.png">
+
+		<title>Principles Of Prophet Muhammad (PBUH)</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			.flex {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.box {
+				width: 450px;
+				height: auto;
+				aspect-ratio: 1;
+				padding: 40px 20px;
+				margin: 10px;
+				border-radius: 2px;
+				box-shadow: 0 0 631px 130px black inset;
+				gap: 10px;
+				font-family: "Roboto Condensed", sans-serif !important;
+				padding: 10px;
+				color: white; /* Font color */
+				flex-direction: column;
+				gap: 14px;
+			}
+
+			.line {
+				width: 50%;
+				height: 4px;
+				background-color: white;
+				border-radius: 3px;
+				margin: 10px auto;
+			}
+
+			.heading {
+				text-transform: uppercase;
+				font-weight: bolder;
+				text-align: center;
+				font-size: xx-large;
+        letter-spacing: 2px;
+			}
+
+			.subtitle {
+        font-weight: bold;
+				text-align: center;
+        font-size: medium;
+			}
+
+			.content {
+        font-weight: bold;
+				text-align: center;
+				margin: 10px 0;
+        font-size: large;
+			}
+
+			.reference {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container"></div>
+		<script>
+			const principles = [
+				{
+					heading: "THINK POSITIVELY",
+					content: "HOPING FOR GOOD IS ALSO AN ACT OF WORSHIP OF ALLAH",
+					reference: "TIRMIDI & HAKIM",
+				},
+				{
+					heading: "ACT FEARLESSLY",
+					content: "IF THE ENTIRE CREATION GATHERED TOGETHER TO HARM YOU. THEY WOULD NOT HARM YOU EXCEPT IF ALLAH WILLED.",
+					reference: "TIRMIDI",
+				},
+				{
+					heading: "DECIDE FIRMLY",
+					content: "THEN WHEN YOU HAVE TAKEN A DECISION, PUT YOUR TRUST IN ALLAH, CERTAINLY ALLAH LOVES THOSE WHO PUT THEIR TRUST IN HIM",
+					reference: "QURAN 3:159",
+				},
+				{
+					heading: "EARN HONESTLY",
+					content: "SEEKING LAWFUL EARNING IS A DUTY (FARZ) AFTER THE DUTY (SALAH)",
+					reference: "BAIHAQI",
+				},
+				{
+					heading: "SPEND WISELY",
+					content:
+						"SPEND, AND DO NOT COUNT, LEST ALLAH COUNTS AGAINST YOU. DO NOT WITHHOLD YOUR MONEY, LEST ALLAH WITHHOLDS FROM YOU. SPEND WHAT YOU CAN",
+					reference: "BUKHARI",
+				},
+				{
+					heading: "LEARN PRACTICALLY",
+					content:
+						"THE ONE WHO WOULD HAVE THE WORST POSITION IN GOD'S SIGHT ON THE DAY OF RESURRECTION WOULD BE A LEARNED MAN WHO DID NOT PROFIT FROM HIS LEARNING",
+					reference: "DARIMI",
+				},
+				{
+					heading: "GREET WARMLY",
+					content: "SMILING IN YOUR BROTHER'S FACE IS AN ACT OF CHARITY",
+					reference: "TIRMIDI",
+				},
+				{
+					heading: "BEHAVE DECENTLY",
+					content: "YOU DO NOT DO EVIL TO THOSE WHO DO EVIL TO YOU, BUT YOU DEAL WITH THEM WITH FORGIVENESS AND KINDNESS",
+					reference: "BUKHARI",
+				},
+				{
+					heading: "EAT SENSIBLY",
+					content: "THE FOOD FOR TWO PERSONS IS SUFFICIENT FOR THREE, AND THE FOOD OF THREE PERSONS IS SUFFICIENT FOR FOUR PERSONS",
+					reference: "BUKHARI",
+				},
+			];
+
+			const container = document.querySelector(".container");
+      const subtitle = 'PROPHET MUHAMMAD (PBUH)'
+			container.insertAdjacentHTML(
+				"beforeend",
+				principles.map((principle, index) => {
+					const additionalImage = `<img src="./name.png" alt="name" width="80%" height="260px" /> `;
+
+					return `
+            ${index === 0 ? additionalImage : ""}
+            <div class="box flex">
+              <div class="line"></div>
+              <div class="heading">${principle.heading}</div>
+              <div class="subtitle">${subtitle}</div>
+              <div class="content">
+                ${principle.content}
+              </div>
+              <div class="line"></div>
+              <div class="reference">${principle.reference}</div>
+            </div>
+          `;
+				})
+			);
+		</script>
+	</body>
+</html>
